@@ -81,4 +81,6 @@ function insertAtBeginningNew<T>(array: T[], value: T) {
   return newArray;
 }
 const demoArrayNew = [1, 2, 3];
-const updatedArrayNew = insertAtBeginning(demoArray, -1); //type of updatedArrayNew is inferred to number[], that's because the Generics syntax will look at the types of the original array items and value, and
+const updatedArrayNew = insertAtBeginningNew(demoArrayNew, -1); //type of updatedArrayNew is inferred to number[], that's because the Generics syntax will look at the types of the original array items and value, and will infer the type of the function based on those types
+const demoArrayNew2 = ['a', 'b', 'c'];
+const updatedArrayNew2 = insertAtBeginningNew(demoArrayNew2, 'd'); //type will be string[]
